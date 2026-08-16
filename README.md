@@ -37,8 +37,8 @@ Built with Next.js and the Gemini API, Data Cleaner detects column types, standa
 ### Installation
 
 ```bash
-git clone https://github.com/your-handle/data-cleaner.git
-cd data-cleaner
+git clone https://github.com/ShivendraPandey26/AI-Data-Cleaner-Visualizer.git
+cd AI-Data-Cleaner-Visualizer
 npm install
 ```
 
