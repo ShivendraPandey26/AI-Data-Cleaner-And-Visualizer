@@ -1,9 +1,8 @@
 "use client";
 import { useState } from "react";
 
-const YOUR_LINKEDIN = "https://linkedin.com/in/your-handle"; // ← replace
-const YOUR_GITHUB = "https://github.com/your-handle"; // ← replace
-const REPO_URL = "https://github.com/your-handle/data-cleaner"; // ← replace, or remove if private
+const YOUR_LINKEDIN = "https://linkedin.com/in/shivendrapandey26";
+const YOUR_GITHUB = "https://github.com/ShivendraPandey26";
 
 export default function Footer() {
   const [showAbout, setShowAbout] = useState(false);

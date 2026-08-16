@@ -2,8 +2,8 @@ import type { CleanedResult, ViewMode } from "@/lib/types";
 import ViewToggle from "./ViewToggle";
 import TableView from "./TableView";
 import JsonView from "./JsonView";
-import SqlView from "./SqlView";
 import DroppedRows from "./DroppedRows";
+import SqlView from "./SqlView";
 
 export default function OutputPanel({
   result,

@@ -30,7 +30,6 @@ export default function FileUpload({
       const reader = new FileReader();
       reader.onload = () => {
         const result = reader.result as string;
-        // strip the "data:<mime>;base64," prefix
         resolve(result.split(",")[1] ?? "");
       };
       reader.onerror = () => reject(new Error("Couldn't read file"));
@@ -47,7 +46,6 @@ export default function FileUpload({
         const text = await readAsText(file);
         onTextReady(text, file.name);
       } else if (ext === "xlsx") {
-        // Dynamic import so the ~1MB SheetJS bundle only loads when needed.
         const XLSX = await import("xlsx");
         const buffer = await file.arrayBuffer();
         const workbook = XLSX.read(buffer, { type: "array" });
@@ -95,7 +93,7 @@ export default function FileUpload({
         onChange={(e) => {
           const file = e.target.files?.[0];
           if (file) handleFile(file);
-          e.target.value = ""; // allow re-selecting the same file
+          e.target.value = "";
         }}
       />
       {parsing ? (

@@ -103,8 +103,7 @@ export async function POST(req: NextRequest) {
         let interaction;
 
         if (hasFile) {
-            // PDF (or other document) — let Gemini read the file directly rather
-            // than trying to extract text client-side, which loses table structure.
+
             interaction = await ai.interactions.create({
                 model: process.env.GEMINI_MODEL || "gemini-3.5-flash",
                 input: [
