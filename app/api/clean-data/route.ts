@@ -155,6 +155,7 @@ ${inputData}
         return NextResponse.json(parsed, { status: 200 });
     } catch (err) {
         console.error("Clean-data error:", err);
-        return NextResponse.json({ error: "Something went wrong processing your data" }, { status: 500 });
+        const errorMessage = err instanceof Error ? err.message : "Something went wrong processing your data";
+        return NextResponse.json({ error: errorMessage }, { status: 500 });
     }
 }
