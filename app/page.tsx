@@ -14,6 +14,7 @@ import FileUpload from "@/components/FileUpload";
 import OutputPanel from "@/components/OutputPanel";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import LoadingStatus from "@/components/Loadingstatus";
 
 export default function Home() {
   const [inputData, setInputData] = useState("");
@@ -122,10 +123,7 @@ export default function Home() {
                              px-5 py-2.5 rounded-lg hover:bg-[#5B5EE8] disabled:opacity-40
                              disabled:cursor-not-allowed transition-colors"
                 >
-                  {loading && (
-                    <span className="h-3.5 w-3.5 rounded-full border-2 border-white/40 border-t-white animate-spin" />
-                  )}
-                  {loading ? "Cleaning…" : "Clean data"}
+                  {loading ? <LoadingStatus /> : "Clean data"}
                 </button>
               </div>
             )}

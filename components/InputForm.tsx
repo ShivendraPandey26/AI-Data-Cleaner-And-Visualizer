@@ -1,5 +1,7 @@
 "use client";
 
+import LoadingStatus from "./Loadingstatus";
+
 export default function InputForm({
   inputData,
   onChange,
@@ -38,13 +40,10 @@ export default function InputForm({
       <button
         disabled={loading || !inputData.trim()}
         className="inline-flex items-center gap-2 bg-[#6C6FF5] text-white text-sm font-medium
-                   px-5 py-2.5 rounded-lg hover:bg-[#5B5EE8] disabled:opacity-40
+                   px-5 py-2.5 rounded-lg hover:bg-[#5B5EE8] disabled:opacity-50
                    disabled:cursor-not-allowed transition-colors"
       >
-        {loading && (
-          <span className="h-3.5 w-3.5 rounded-full border-2 border-white/40 border-t-white animate-spin" />
-        )}
-        {loading ? "Cleaning…" : "Clean data"}
+        {loading ? <LoadingStatus /> : "Clean data"}
       </button>
     </form>
   );
