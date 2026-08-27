@@ -15,6 +15,7 @@ import OutputPanel from "@/components/OutputPanel";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import LoadingStatus from "@/components/Loadingstatus";
+import Example from "@/components/Example";
 
 export default function Home() {
   const [inputData, setInputData] = useState("");
@@ -139,6 +140,7 @@ export default function Home() {
         )}
       </div>
 
+      <Example />
       <Footer />
     </div>
   );
