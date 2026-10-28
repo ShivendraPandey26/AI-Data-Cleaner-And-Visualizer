@@ -115,8 +115,3 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 Issues and pull requests are welcome. If you're proposing a significant change, please open an issue first to discuss what you'd like to change.
 
-## Author
-
-**Shivendra Kumar Pandey**
-
-- LinkedIn: [linkedin.com/in/shivendrapandey26](https://linkedin.com/in/shivendrapandey26)
